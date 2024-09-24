@@ -106,7 +106,7 @@ class _LoginWidgetState extends State<LoginWidget>
                               unselectedLabelStyle: FlutterFlowTheme.of(context)
                                   .titleMedium
                                   .override(
-                                    fontFamily: 'Inter',
+                                    fontFamily: 'Roboto',
                                     letterSpacing: 0.0,
                                   ),
                               indicatorColor: const Color(0x0089DC8C),
