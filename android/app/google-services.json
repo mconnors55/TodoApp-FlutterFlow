@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1049939855782",
+    "project_id": "to-do-moekvo",
+    "storage_bucket": "to-do-moekvo.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1049939855782:android:3b62225e82d2b6bcb9e767",
+        "android_client_info": {
+          "package_name": "com.mycompany.todo"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDRo3r14P1BXK7UMwTwupWQVPvWw7gxEyk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
