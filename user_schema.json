@@ -1,0 +1,51 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "type": "object",
+    "properties": {
+      "users": {
+        "type": "object",
+        "description": "Collection of user documents",
+        "properties": {
+          "userDocument": {
+            "type": "object",
+            "description": "Schema for a single user document",
+            "properties": {
+              "birthdate": {
+                "type": "string",
+                "format": "date-time",
+                "description": "The user's birthdate in ISO 8601 format."
+              },
+              "created_time": {
+                "type": "string",
+                "format": "date-time",
+                "description": "Timestamp when the user was created in ISO 8601 format."
+              },
+              "display_name": {
+                "type": "string",
+                "description": "The display name of the user."
+              },
+              "email": {
+                "type": "string",
+                "format": "email",
+                "description": "The email address of the user."
+              },
+              "photo_url": {
+                "type": "string",
+                "format": "uri",
+                "description": "URL to the user's profile photo."
+              },
+              "hometown": {
+                "type": "string",
+                "description": "The user's hometown."
+              },
+              "uid": {
+                "type": "string",
+                "description": "Unique identifier for the user."
+              }
+            },
+            "required": ["birthdate", "created_time", "display_name", "email", "uid"]
+          }
+        }
+      }
+    }
+}
