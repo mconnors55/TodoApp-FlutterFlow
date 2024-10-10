@@ -77,18 +77,22 @@ class _TaskWidgetState extends State<TaskWidget> {
                 ),
                 child: Checkbox(
                   value: _model.checkboxValue ??= widget.completed!,
-                  onChanged: (newValue) async {
-                    safeSetState(() => _model.checkboxValue = newValue!);
-                    if (newValue!) {
-                      await widget.checkAction?.call();
-                    }
-                  },
+                  onChanged: widget.completed!
+                      ? null
+                      : (newValue) async {
+                          safeSetState(() => _model.checkboxValue = newValue!);
+                          if (newValue!) {
+                            await widget.checkAction?.call();
+                          }
+                        },
                   side: BorderSide(
                     width: 2,
                     color: FlutterFlowTheme.of(context).alternate,
                   ),
                   activeColor: FlutterFlowTheme.of(context).primary,
-                  checkColor: FlutterFlowTheme.of(context).info,
+                  checkColor: widget.completed!
+                      ? null
+                      : FlutterFlowTheme.of(context).info,
                 ),
               ),
               Flexible(

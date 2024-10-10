@@ -1,4 +1,5 @@
 import '/auth/firebase_auth/auth_util.dart';
+import '/backend/api_requests/api_calls.dart';
 import '/backend/backend.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
@@ -772,8 +773,14 @@ class _LoginWidgetState extends State<LoginWidget>
                                     createdTime: getCurrentTimestamp,
                                   ));
 
-                              context.goNamedAuth(
-                                  'onboarding', context.mounted);
+                              await SendEmailCall.call(
+                                to: currentUserEmail,
+                                subject: 'Welcome!',
+                                text: 'Welcome to the To-Do app!',
+                              );
+
+                              context.pushNamedAuth(
+                                  'CheckEmail', context.mounted);
                             },
                             text: 'Sign Up',
                             options: FFButtonOptions(
